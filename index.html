@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KaaS Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a1f1c;
+        --muted: #4a554e;
+        --paper: #e8efe6;
+        --accent: #2d6a4f;
+        --accent-hover: #1b4332;
+        --glow: rgba(45, 106, 79, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        font-family: "DM Sans", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(ellipse 80% 60% at 20% 10%, var(--glow), transparent 55%),
+          radial-gradient(ellipse 70% 50% at 90% 80%, rgba(26, 31, 28, 0.06), transparent 50%),
+          linear-gradient(165deg, #f4f7f3 0%, var(--paper) 45%, #dce6d9 100%);
+      }
+
+      main {
+        max-width: 32rem;
+        text-align: center;
+        animation: rise 0.7s ease-out both;
+      }
+
+      .brand {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(2.75rem, 8vw, 4rem);
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        margin-bottom: 1.25rem;
+        animation: rise 0.7s ease-out 0.08s both;
+      }
+
+      p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: var(--muted);
+        margin-bottom: 2rem;
+        animation: rise 0.7s ease-out 0.16s both;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        background: var(--accent);
+        text-decoration: none;
+        padding: 0.85rem 1.5rem;
+        border-radius: 0.35rem;
+        transition: background 0.2s ease, transform 0.2s ease;
+        animation: rise 0.7s ease-out 0.24s both;
+      }
+
+      a:hover {
+        background: var(--accent-hover);
+        transform: translateY(-1px);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="brand">KaaS</h1>
+      <p>
+        Knowledge as a Service — tools and docs for building and sharing
+        structured knowledge.
+      </p>
+      <a href="https://kaas-dev.github.io/kaas/">Go to KaaS →</a>
+    </main>
+  </body>
+</html>
